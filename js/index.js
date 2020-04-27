@@ -12,7 +12,7 @@ function postData(event) {
   let link = document.getElementById("link").value;
   let reference = document.getElementById("reference").value;
   let year = document.getElementById("year").value;
-
+  document.getElementById("modal").classList.add("modal2");
   fetch(
     "https://cors-anywhere.herokuapp.com/https://europe-west1-cybersecurity-def-api.cloudfunctions.net/api/definations",
     {
@@ -34,8 +34,13 @@ function postData(event) {
   )
     .then((res) => res.json())
     .then((data) => {
+      document.getElementById("modal").classList.remove("modal2");
       document.getElementById("pain").reset();
       return console.log(data);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      window.alert("sorry,please something went wrong try again");
+      document.getElementById("modal").classList.remove("modal2");
+      return console.log(err);
+    });
 }

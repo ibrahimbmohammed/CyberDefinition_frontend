@@ -57,7 +57,29 @@ a:hover {
   text-decoration: none;
   color: #57b846;
 }
-
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif")
+    50% 50% no-repeat;
+}
+.modal2 {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif")
+    50% 50% no-repeat;
+}
 /*---------------------------------------------*/
 h1,
 h2,
