@@ -1,4 +1,3 @@
-let axios = require("axios");
 document
   .querySelector(".contact1-form-btn")
   .addEventListener("submit", postData);
@@ -34,6 +33,9 @@ function postData(event) {
     }
   )
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      document.getElementById("pain").reset();
+      return console.log(data);
+    })
     .catch((err) => console.log(err));
 }
