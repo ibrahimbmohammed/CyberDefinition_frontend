@@ -35,6 +35,7 @@ function postData(event) {
     .then((res) => res.json())
     .then((data) => {
       document.getElementById("modal").classList.remove("modal2");
+      success_modal();
       document.getElementById("pain").reset();
       return console.log(data);
     })
@@ -43,4 +44,11 @@ function postData(event) {
       document.getElementById("modal").classList.remove("modal2");
       return console.log(err);
     });
+}
+
+function success_modal() {
+  document.getElementById("success").classList.add("modalS");
+  setTimeout(function () {
+    document.getElementById("success").classList.remove("modalS");
+  }, 1000);
 }
